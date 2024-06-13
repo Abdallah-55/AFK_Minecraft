@@ -1,6 +1,5 @@
 const mineflayer = require('mineflayer')
 const readline = require('readline')
-const port = process.env.PORT || 10000;
 const keep_alive = require('./keep_alive') 
 
 const botConfigs = [
@@ -18,7 +17,7 @@ const botConfigs = [
   }*/
   {
     host: 'T2eelYaBoody.aternos.me',
-    username: 'bot03',
+    username: 'bot02',
     //auth: 'microsoft',
     //password: '@Abd99allah'
   }
@@ -101,6 +100,6 @@ function createBot(config, index) {
 // Create and manage both bots
 botConfigs.forEach((config, index) => createBot(config, index))
 
-
+client.login(process . env. TOKEN) ; // login bot using token
 
 // This is a big comment.
