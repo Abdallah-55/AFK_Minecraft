@@ -5,9 +5,11 @@ const keep_alive = require('./keep_alive')
 
 // Create bot
 const bot = mineflayer.createBot({
-  host: 'T2eelYaBoody.aternos.me',
-  port: 28685,
-  username: 'bot02'
+  host: 'donutsmp.net',
+  port: 19132,
+  username: 'yossefman123@gmail.com',
+  auth: 'microsoft',
+  password:'P@nzer1234'
 })
 
 
@@ -30,9 +32,11 @@ bot.on('end', () => {
   console.log('Bot has been disconnected. Reconnecting in 30 seconds...')
   setTimeout(() => {
     bot = mineflayer.createBot({
-      host: 'T2eelYaBoody.aternos.me',
-      port: 28685,
-      username: 'bot02'
+    host: 'donutsmp.net',
+    port: 19132,
+    username: 'yossefman123@gmail.com',
+    auth: 'microsoft',
+    password:'P@nzer1234'
     })
   }, 30000)
 })
