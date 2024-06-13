@@ -1,5 +1,6 @@
 const mineflayer = require('mineflayer')
 const readline = require('readline')
+const port = process.env.PORT || 4000;
 
 // Create bot
 const bot = mineflayer.createBot({
@@ -44,6 +45,8 @@ const rl = readline.createInterface({
 rl.on('line', (input) => {
   bot.chat(input)
 })
+
+client. login(process.env.TOKEN); // login bot using token
 
 // Bot events
 
