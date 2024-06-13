@@ -52,4 +52,3 @@ rl.on('line', (input) => {
 
 setInterval(antiAFK, 60000)  // Jump and look around every minute
 
-client. login(process.env.TOKEN); // login bot using token
