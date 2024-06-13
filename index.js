@@ -1,6 +1,7 @@
 const mineflayer = require('mineflayer')
 const readline = require('readline')
 const port = process.env.PORT || 4000;
+const keep_alive = require('./keep_alive') 
 
 // Create bot
 const bot = mineflayer.createBot({
