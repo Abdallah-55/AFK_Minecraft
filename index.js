@@ -101,6 +101,6 @@ function createBot(config, index) {
 // Create and manage both bots
 botConfigs.forEach((config, index) => createBot(config, index))
 
-client.login(process . env. TOKEN) ; // login bot using token
+
 
 // This is a big comment.
