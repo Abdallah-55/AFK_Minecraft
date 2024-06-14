@@ -10,7 +10,7 @@ const botConfigs = [
     auth: 'microsoft'
   },*/
   {
-    host: 'T2eelYaBoody.aternos.me',
+    host: 'donut.smp',
     username: 'abdoram999@gmail.com',
     auth: 'microsoft'
   }
