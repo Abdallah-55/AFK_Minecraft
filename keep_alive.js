@@ -19,7 +19,7 @@ io.on('connection', (socket) => {
   console.log('New client connected')
 
   // Send the last 10000 messages to the client
-  socket.emit('init', messages.slice(-10000))
+  socket.emit('init', messages.slice(-1000))
 
   socket.on('sendMessage', (msg) => {
     const message = {
