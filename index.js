@@ -6,13 +6,13 @@ const keep_alive = require('./keep_alive')
 const botConfigs = [
   {
     host: 'donutsmp.net',
-    username: 'yossefman123@gmail.com',
+    username: 'abdoram999@gmail.com',
     auth: 'microsoft'
   },
   {
     host: 'donutsmp.net',
-    username: 'abdoram999@gmail.com',
-    auth: 'microsoft'
+    username: 'yossefman123@gmail.com',
+    auth: 'microsoft'    
   }
   /*{
     host: 'T2eelYaBoody.aternos.me',
