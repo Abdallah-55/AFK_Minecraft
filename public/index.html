@@ -34,6 +34,11 @@
       color: gray;
       font-size: 0.9em;
     }
+    .shardsMessage {
+      font-weight: bold;
+      font-style: italic;
+      color: limegreen;
+    }
     #inputContainer {
       margin-top: 20px;
     }
@@ -47,7 +52,7 @@
   </style>
 </head>
 <body>
-  <div id="status">I'm alive</div>
+  <div id="status">I'm Alive</div>
   <div id="messages"></div>
   <div id="inputContainer">
     <input type="text" id="chatInput" placeholder="Type your message...">
@@ -56,7 +61,7 @@
   <script src="/socket.io/socket.io.js"></script>
   <script>
     const socket = io()
-    
+
     socket.on('init', (msgs) => {
       const messagesDiv = document.getElementById('messages')
       messagesDiv.innerHTML = ''
@@ -71,9 +76,19 @@
       const messagesDiv = document.getElementById('messages')
       const messageDiv = document.createElement('div')
       messageDiv.className = 'message'
+      if (msg.username === 'shards') {
+        messageDiv.classList.add('shardsMessage')
+      }
+
       messageDiv.innerHTML = `<span class="username">${msg.username}</span>: ${msg.text} <span class="time">(${msg.time})</span>`
       messagesDiv.appendChild(messageDiv)
-      messagesDiv.scrollTop = messagesDiv.scrollHeight
+
+      // Check if the user is at the bottom of the messages
+      const isScrolledToBottom = messagesDiv.scrollHeight - messagesDiv.clientHeight <= messagesDiv.scrollTop + 1
+
+      if (isScrolledToBottom) {
+        messagesDiv.scrollTop = messagesDiv.scrollHeight
+      }
     }
 
     function sendMessage() {
@@ -87,4 +102,3 @@
   </script>
 </body>
 </html>
-
