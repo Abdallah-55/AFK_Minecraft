@@ -13,6 +13,11 @@ const botConfigs = [
     host: 'donutsmp.net',
     username: 'yossefman123@gmail.com',
     auth: 'microsoft'    
+  },
+  {
+    host: 'donutsmp.net',
+    username: 'malekahmed2006@outlook.com',
+    auth: 'microsoft'    
   }
   /*{
     host: 'T2eelYaBoody.aternos.me',
