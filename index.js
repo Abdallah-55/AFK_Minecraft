@@ -7,14 +7,12 @@ const botConfigs = [
   /*{
     host: 'donutsmp.net',
     username: 'yossefman123@gmail.com',
-    auth: 'microsoft',
-    password: 'P@nzer1234'
+    auth: 'microsoft'
   },*/
   {
     host: 'T2eelYaBoody.aternos.me',
     username: 'abdoram999@gmail.com',
-    auth: 'microsoft',
-    password: '@Abd99allah'
+    auth: 'microsoft'
   }
   /*{
     host: 'T2eelYaBoody.aternos.me',
