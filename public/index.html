@@ -83,6 +83,8 @@
 
     function addMessage(msg) {
       const messagesDiv = document.getElementById('messages')
+      const isScrolledToBottom = messagesDiv.scrollHeight - messagesDiv.clientHeight <= messagesDiv.scrollTop + 1
+
       const messageDiv = document.createElement('div')
       messageDiv.className = 'message'
       if (msg.username === 'shards') {
@@ -93,9 +95,7 @@
       messageDiv.innerHTML = `<span class="username">${msg.username}</span>: ${msg.text} <span class="time">(${msg.time})</span>`
       messagesDiv.appendChild(messageDiv)
 
-      // Check if the user is at the bottom of the messages
-      const isScrolledToBottom = messagesDiv.scrollHeight - messagesDiv.clientHeight <= messagesDiv.scrollTop + 1
-
+      // Scroll to the bottom if the user is at the bottom
       if (isScrolledToBottom) {
         messagesDiv.scrollTop = messagesDiv.scrollHeight
       }
