@@ -9,22 +9,19 @@ const botConfigs = [
   {
     host: 'donutsmp.net',
     username: 'abdoram999@gmail.com',
-    auth: 'microsoft',
-    //password: '@Abd99allah'
+    auth: 'microsoft'
   },
   
   {
     host: 'donutsmp.net',
     username: 'yossefman123@gmail.com',
-    auth: 'microsoft',
-    //password: 'DetestoX'
+    auth: 'microsoft'
   },
   
   {
     host: 'donutsmp.net',
     username: 'malekahmed2006@outlook.com',
-    auth: 'microsoft',
-    //password: 'jfkdls;alskdjfj'
+    auth: 'microsoft'
   },
   
   /*{
