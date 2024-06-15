@@ -14,7 +14,7 @@
       font-weight: bold;
       margin-top: 20px;
     }
-    #messages {
+    #messages, #shardsMessages {
       max-height: 400px;
       overflow-y: scroll;
       margin: 20px auto;
@@ -39,6 +39,11 @@
       font-style: italic;
       color: limegreen;
     }
+    #shardsMessages .message {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: darkorange;
+    }
     #inputContainer {
       margin-top: 20px;
     }
@@ -53,6 +58,9 @@
 </head>
 <body>
   <div id="status">I'm Alive</div>
+  <h2>Shards Update:</h2>
+  <div id="shardsMessages"></div>
+  <h2>Chat:</h2>
   <div id="messages"></div>
   <div id="inputContainer">
     <input type="text" id="chatInput" placeholder="Type your message...">
@@ -61,6 +69,7 @@
   <script src="/socket.io/socket.io.js"></script>
   <script>
     const socket = io()
+    const shardsMessages = []
 
     socket.on('init', (msgs) => {
       const messagesDiv = document.getElementById('messages')
@@ -78,6 +87,7 @@
       messageDiv.className = 'message'
       if (msg.username === 'shards') {
         messageDiv.classList.add('shardsMessage')
+        addShardsMessage(msg)
       }
 
       messageDiv.innerHTML = `<span class="username">${msg.username}</span>: ${msg.text} <span class="time">(${msg.time})</span>`
@@ -89,6 +99,21 @@
       if (isScrolledToBottom) {
         messagesDiv.scrollTop = messagesDiv.scrollHeight
       }
+    }
+
+    function addShardsMessage(msg) {
+      const shardsMessagesDiv = document.getElementById('shardsMessages')
+      const shardsMessageDiv = document.createElement('div')
+      shardsMessageDiv.className = 'message'
+      shardsMessageDiv.innerHTML = `<span class="username">${msg.username}</span>: ${msg.text} <span class="time">(${msg.time})</span>`
+
+      shardsMessages.push(shardsMessageDiv)
+      if (shardsMessages.length > 3) {
+        shardsMessages.shift()
+      }
+
+      shardsMessagesDiv.innerHTML = ''
+      shardsMessages.forEach(m => shardsMessagesDiv.appendChild(m))
     }
 
     function sendMessage() {
