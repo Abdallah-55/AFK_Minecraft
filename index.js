@@ -9,23 +9,28 @@ const botConfigs = [
   {
     host: 'donutsmp.net',
     username: 'abdoram999@gmail.com',
-    auth: 'microsoft'
+    auth: 'microsoft',
+    //password: '@Abd99allah'
   },
+  
   {
     host: 'donutsmp.net',
     username: 'yossefman123@gmail.com',
-    auth: 'microsoft'    
+    auth: 'microsoft',
+    //password: 'DetestoX'
   },
-  /*{
+  
+  {
     host: 'donutsmp.net',
     username: 'malekahmed2006@outlook.com',
-    auth: 'microsoft'    
-  },*/
+    auth: 'microsoft',
+    //password: 'jfkdls;alskdjfj'
+  },
+  
   /*{
     host: 'T2eelYaBoody.aternos.me',
     username: 'bot02',
-    //auth: 'microsoft',
-    //password: '@Abd99allah'
+    //auth: 'offline'
   }*/
 ];
 
